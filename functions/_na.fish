@@ -1,3 +1,6 @@
+# package manager detection logic is based on [kKaribash/ni.fish]
+# Original Source: https://github.com/Karibash/ni.fish/blob/main/functions/ni.fish
+
 function _na
     _na_get_package_manager_name $PWD
 end
