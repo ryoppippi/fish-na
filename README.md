@@ -1,5 +1,5 @@
 # na.fish
-[@antfu/ni](https://github.com/antfu-collective/ni) alternative written in fish shell.  
+[@antfu/ni](https://github.com/antfu-collective/ni) alternative written in fish shell using abbr feature!
 
 ![screen](./docs/screen.avif)
 
@@ -26,7 +26,7 @@ abbr -a n -f _na
 ```
 
 ## Usage
-Just type `n` (or your favorite abbrv) and hit space key, then the appropriate node/deno package manager command will be expanded.
+Just type `n` (or your favorite abbr key) and hit space key, then the appropriate node/deno package manager command will be expanded.
 
 ## Inspired by
 - [@antfu/ni](https://github.com/antfu-collective/ni) 
