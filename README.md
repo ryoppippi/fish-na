@@ -29,7 +29,7 @@ abbr -a n -f _na
 Just type `n` (or your favorite abbrv) and hit space key, then the appropriate node/deno package manager command will be expanded.
 
 ## Inspired by
-- [antfu/ni]([@antfu/ni](https://github.com/antfu-collective/ni) 
+- [@antfu/ni](https://github.com/antfu-collective/ni) 
 - [azu/ni.zsh](https://github.com/azu/ni.zsh)
 - [Karibash/ni.fish](https://github.com/Karibash/ni.fish)
 
