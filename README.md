@@ -18,7 +18,7 @@ fisher install ryoppippi/na.fish
 2. Configure your favorite abbrv
 ex:
 ```fish
-abbr -a n -f _na_get_package_manager_name_pwd
+abbr -a n -f _na
 ```
 
 ## Usage

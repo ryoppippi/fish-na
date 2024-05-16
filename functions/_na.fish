@@ -1,4 +1,4 @@
-function _na_get_package_manager_name_pwd
+function _na
     _na_get_package_manager_name $PWD
 end
 
