@@ -9,6 +9,8 @@
 ## Requirements
 - fish shell
 - fzf
+- awk
+- sed
 
 ## Install
 
