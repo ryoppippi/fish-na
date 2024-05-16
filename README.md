@@ -1,6 +1,8 @@
 # na.fish
 [@antfu/ni](https://github.com/antfu-collective/ni) alternative written in fish shell.  
 
+![screen](./docs/screen.avif)
+
 ## Features
 - Automatically detects the package manager (npm, yarn, pnpm, bun, deno) in the current directory.
 
