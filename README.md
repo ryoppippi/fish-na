@@ -36,8 +36,23 @@ set -g NA_FUZZYFINDER sk
 set -g NA_FUZZYFINDER_OPTIONS
 
 # Set your favorite package manager list. You can customize the order. (default: npm pnpm bun yarn deno)
-set -g NA_PACKAGE_MANAGER_LIST bun deno pnpm yarn
+set -g NA_PACKAGE_MANAGER_LIST bun deno pnpm yarn npm
 ```
+
+## Recipies
+
+### Select package manager quickly with fzf
+
+Set options like this:
+```fish
+set -g NA_FUZZYFINDER fzf
+set -g NA_FUZZYFINDER_OPTIONS --bind 'one:accept' --query '^'
+```
+This options means:
+- `--bind 'one:accept'` : Automatically select the first item if there is only one item in the list.
+- `--query '^'` : Make query be matched from the beginning of the line, not fuzzy search.
+
+![screen2](./docs/screen2.avif)
 
 ## Usage
 Just type `n` (or your favorite abbr key) and hit space key, then the appropriate node/deno package manager command will be expanded.
