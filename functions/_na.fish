@@ -1,6 +1,21 @@
 # package manager detection logic is based on [kKaribash/ni.fish]
 # Original Source: https://github.com/Karibash/ni.fish/blob/main/functions/ni.fish
 
+# Set the fuzzy finder command to use
+if test -z "$NA_FUZZYFINDER"
+    set -g NA_FUZZYFINDER fzf
+end
+
+# Set the fuzzy finder options
+if test -z "$NA_FUZZYFINDER_OPTIONS"
+    set -g NA_FUZZYFINDER_OPTIONS
+end
+
+# Set your favorite package manager list. You can customize the order.
+if test -z "$NA_PACKAGE_MANAGER_LIST"
+    set -g NA_PACKAGE_MANAGER_LIST npm pnpm bun yarn deno
+end
+
 function _na
     _na_get_package_manager_name $PWD
 end
@@ -27,9 +42,8 @@ function _na_find_deno_json --argument-names path
     _na_find_up $path deno.json deno.jsonc
 end
 
-function _na_select_package_manager_with_fzf --argument-names path
-    set -l package_manager_names npm pnpm bun yarn deno
-    echo ( for i in $package_manager_names; echo $i; end  | fzf)
+function _na_select_package_manager_with_fuzzy_finder --argument-names path
+    echo ( for i in $NA_PACKAGE_MANAGER_LIST; echo $i; end  | $NA_FUZZYFINDER $NA_FUZZYFINDER_OPTIONS )
 end
 
 function _na_get_package_manager_name --argument-names path
@@ -73,5 +87,5 @@ function _na_get_package_manager_name --argument-names path
         return
     end
 
-    echo (_na_select_package_manager_with_fzf $path)
+    echo (_na_select_package_manager_with_fuzzy_finder $path)
 end
