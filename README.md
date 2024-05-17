@@ -48,7 +48,8 @@ Set options like this:
 set -g NA_FUZZYFINDER fzf
 set -g NA_FUZZYFINDER_OPTIONS --bind 'one:accept' --query '^'
 ```
-This options means:
+
+These options are:
 - `--bind 'one:accept'` : Automatically select the first item if there is only one item in the list.
 - `--query '^'` : Make query be matched from the beginning of the line, not fuzzy search.
 
