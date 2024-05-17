@@ -25,6 +25,20 @@ ex:
 abbr -a n -f _na
 ```
 
+## Customization
+You can customize the following options in your config.fish file:
+
+```fish
+# Set the fuzzy finder command to use (default: fzf)
+set -g NA_FUZZYFINDER fzf
+
+# Set the fuzzy finder options
+set -g NA_FUZZYFINDER_OPTIONS
+
+# Set your favorite package manager list. You can customize the order. (default: npm pnpm bun yarn deno)
+set -g NA_PACKAGE_MANAGER_LIST npm pnpm bun yarn deno
+```
+
 ## Usage
 Just type `n` (or your favorite abbr key) and hit space key, then the appropriate node/deno package manager command will be expanded.
 
