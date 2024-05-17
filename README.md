@@ -8,7 +8,7 @@
 
 ## Requirements
 - fish shell
-- fzf
+- fzf (or your favorite fuzzy finder such as peco, skim, etc.)
 - awk
 - sed
 
@@ -30,13 +30,13 @@ You can customize the following options in your config.fish file:
 
 ```fish
 # Set the fuzzy finder command to use (default: fzf)
-set -g NA_FUZZYFINDER fzf
+set -g NA_FUZZYFINDER sk
 
 # Set the fuzzy finder options
 set -g NA_FUZZYFINDER_OPTIONS
 
 # Set your favorite package manager list. You can customize the order. (default: npm pnpm bun yarn deno)
-set -g NA_PACKAGE_MANAGER_LIST npm pnpm bun yarn deno
+set -g NA_PACKAGE_MANAGER_LIST bun deno pnpm yarn
 ```
 
 ## Usage
