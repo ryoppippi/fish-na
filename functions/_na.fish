@@ -57,7 +57,7 @@ function _na_get_package_manager_name --argument-names path
     end
 
     if test -n "$package_json_path"
-        set package_manager_name (awk -F\" '/"packageManager"/{print $4}' $package_json_path | sed -e 's/@.*//')
+        set package_manager_name (cat $package_json_path | string match --entire -r "packageManager" | string replace -r '.*"packageManager": "' '' | string split @)[1]
         if test -n "$package_manager_name"
             if contains $package_manager_name [npm yarn pnpm bun]
                 echo $package_manager_name
