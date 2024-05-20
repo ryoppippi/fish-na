@@ -9,8 +9,6 @@
 ## Requirements
 - fish shell
 - fzf (or your favorite fuzzy finder such as peco, skim, etc.)
-- awk
-- sed
 
 ## Install
 
