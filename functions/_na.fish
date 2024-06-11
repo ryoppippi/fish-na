@@ -58,8 +58,9 @@ function _na_get_package_manager_name --argument-names path
 
     if test -n "$package_json_path"
         set package_manager_name (cat $package_json_path | string match --entire -r "packageManager" | string replace -r '.*"packageManager": "' '' | string trim | string split @)[1]
+        set valid_package_manager_name npm yarn pnpm bun
         if test -n "$package_manager_name"
-            if contains $package_manager_name [npm yarn pnpm bun]
+            if contains $package_manager_name $valid_package_manager_name
                 echo $package_manager_name
                 return
             end
