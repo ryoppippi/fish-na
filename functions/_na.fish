@@ -31,7 +31,7 @@ function _na_find_up --argument-names path
 end
 
 function _na_find_lock_file --argument-names path
-    _na_find_up $path deno.lock package-lock.json npm-shrinkwrap.json yarn.lock pnpm-lock.yaml bun.lockb
+    _na_find_up $path deno.lock package-lock.json npm-shrinkwrap.json yarn.lock pnpm-lock.yaml bun.lockb bunfig.toml
 end
 
 function _na_find_package_json --argument-names path
@@ -74,7 +74,7 @@ function _na_get_package_manager_name --argument-names path
         switch (basename $lock_file_path)
             case "deno.lock"
                 echo deno
-            case "bun.lockb"
+            case "bun.lockb" "bunfig.toml"
                 echo bun
             case "yarn.lock"
                 echo yarn
