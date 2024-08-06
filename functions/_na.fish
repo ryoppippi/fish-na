@@ -64,7 +64,7 @@ function _na_get_package_manager_name --argument-names path
                 return
             end
 
-            echo "ni: Unknown packageManager: \"$package_manager_name\"" >&2
+            echo "na: Unknown packageManager: \"$package_manager_name\"" >&2
             return 1
         end
     end
