@@ -1,4 +1,4 @@
-# na.fish
+# fish-na
 [@antfu/ni](https://github.com/antfu-collective/ni) alternative written in fish shell using abbr feature!
 
 ![screen](./docs/screen.avif)
@@ -14,7 +14,7 @@
 
 1. Install with fisher
 ```sh
-fisher install ryoppippi/na.fish
+fisher install ryoppippi/fish-na
 
 ```
 2. Configure your favorite abbrv
