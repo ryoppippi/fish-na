@@ -69,6 +69,9 @@ These options are:
 Just type `n` (or your favorite abbr key) and hit space key, then the
 appropriate node/deno package manager command will be expanded.
 
+## Article
+[Zenn](https://zenn.dev/ryoppippi/articles/7709e0644a2259)
+
 ## Inspired by
 
 - [@antfu/ni](https://github.com/antfu-collective/ni)
